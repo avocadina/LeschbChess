@@ -1,0 +1,48 @@
+@use "./colors.scss" as *;
+$font-family: "Inter", sans-serif;
+$second-family: "ABCSolarPlusVariable", sans-serif;
+
+.first-family {
+    font-family: $font-family;
+}
+
+.second-family {
+    font-family: $second-family;
+    font-feature-settings: 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss09' on, 'ss16' on, 'ss17' on, 'ss18' on;
+}
+//
+
+.light {
+    font-weight: 300;
+}
+
+.medium {
+    font-weight: 500;
+}
+//
+
+.text-center {
+    text-align: center;
+}
+//
+
+.text-60 {
+    font-size: clamp(3.125rem, 2.869rem + 1.14vw, 3.75rem);
+}
+
+.text-28 {
+    font-size: clamp(1.25rem, 1.045rem + 0.91vw, 1.75rem);
+}
+
+.text-14 {
+    font-size: 12px;
+}
+//
+
+.white {
+    color: $white;
+}
+
+.red {
+    color: #ff0000;
+}

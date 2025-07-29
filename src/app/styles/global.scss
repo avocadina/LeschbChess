@@ -1,0 +1,72 @@
+.body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+.main {
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 140px;
+
+    @media screen and (width <= 768px) {
+        bottom: 130px;
+    }
+}
+//
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+//
+
+.align-center {
+    align-items: center;
+}
+//
+
+.center {
+    display: grid;
+    place-content: center;
+}
+//
+
+.gap-4 {
+    gap: $space-4 
+}
+
+.gap-5 {
+    gap: $space-5;
+}
+
+.gap-6 {
+    gap: $space-6;
+}
+
+.gap-2 {
+    gap: $space-2;
+}
+
+.gap-60px {
+    gap: $space-60px;
+}
+//
+
+.padding-20-24 {
+    padding: $space-5 $space-6;
+}
+//
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
