@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import navigationSlice from "./reducers/navigation.slice";
 
 export const store = configureStore({
-  reducer: {},
-  devTools: true,
+	reducer: {
+		navigation: navigationSlice,
+	},
+	devTools: true,
 });
 
 export type RootState = ReturnType<typeof store.getState>;

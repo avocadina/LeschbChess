@@ -3,13 +3,13 @@ import StoreProvider from "../store/store-provider";
 import ClientLayout from "~/entities/client-layout";
 
 interface Props {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }
 
 export default function ClientRootLayout({ children }: Props) {
-  return (
-    <StoreProvider>
-      <ClientLayout>{children}</ClientLayout>
-    </StoreProvider>
-  );
+	return (
+		<StoreProvider>
+			<ClientLayout>{children}</ClientLayout>
+		</StoreProvider>
+	);
 }
