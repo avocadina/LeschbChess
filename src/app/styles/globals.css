@@ -1,0 +1,12 @@
+:root {
+    --text-primary: "#1E1E1E";
+    --text-gray: "#5C5C5C";
+    --text-accent: "#2A9D8F";
+
+    --background-primary: "#FAFAFA";
+    --background-secondary: "#F0F0F0";
+    --background-accent: "#2A9D8F";
+    --background-accent-hover: "#21867B";
+
+    --border: "#D1D1D1";
+}
