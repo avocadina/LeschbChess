@@ -2,11 +2,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface InitialStateI {
 	deviceType: "ios" | "android" | "web";
+	cursorHovered: boolean;
 	[key: string]: any;
 }
 
 const initialState: InitialStateI = {
 	deviceType: "web",
+	cursorHovered: false,
 };
 
 export const navigationSlice = createSlice({
@@ -31,5 +33,5 @@ export const navigationSlice = createSlice({
 });
 
 export const { setNavigation } = navigationSlice.actions;
-export const selectNav = (state: { nav: InitialStateI }) => state.nav;
+export const selectNav = (state: { navigation: InitialStateI }) => state.navigation;
 export default navigationSlice.reducer;

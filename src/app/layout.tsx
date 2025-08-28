@@ -8,6 +8,7 @@ import "./styles/globals.css";
 export const metadata: Metadata = {
 	title: "leSchb Chess",
 	description: "Сайт с информацией по шахматам (в разработке)",
+	icons: ["/logo.png"],
 };
 
 export default function RootLayout({
