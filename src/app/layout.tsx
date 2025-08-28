@@ -4,7 +4,6 @@ import ClientRootLayout from "./client-layout";
 import "./styles/reset.scss";
 import "./styles/global.scss";
 import "./styles/globals.css";
-import "./styles/parallax.scss";
 
 export const metadata: Metadata = {
 	title: "leSchb Chess",

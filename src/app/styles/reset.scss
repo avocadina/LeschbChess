@@ -1,5 +1,6 @@
 @use "app/styles/colors.scss" as *;
 @use "app/styles/sizes.scss" as *;
+
 *,
 *::before,
 *::after {
@@ -37,7 +38,7 @@ path {
 }
 
 html {
-  background-color: $backround-primary;
+  background-color: $background-primary;
   scroll-behavior: smooth;
   @include scrollbar();
 }
@@ -81,4 +82,21 @@ select {
   color: inherit;
   border: none;
   outline: none;
+}
+
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $neutral-white;
+
+  &::selection {
+    background-color: $white;
+    color: $background-primary;
+  }
 }

@@ -1,8 +1,6 @@
 .body {
     width: 100vw;
     min-height: 100vh;
-    height: auto;
-    overflow: hidden;
 }
 //
 
@@ -45,7 +43,7 @@
 }
 
 .gap-60px {
-    gap: $space-60px;
+    gap: $space-60;
 }
 //
 

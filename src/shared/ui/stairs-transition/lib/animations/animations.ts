@@ -1,0 +1,33 @@
+export const expand = {
+	initial: {
+		top: 0,
+	},
+	enter: (i: number) => ({
+		top: "100vh",
+		transition: {
+			duration: 0.6,
+			delay: 0.1 * i,
+			ease: [0.215, 0.61, 0.355, 1],
+		},
+	}),
+	exit: (i: number) => ({
+		height: "100vh",
+		transition: {
+			duration: 0.6,
+			delay: 0.1 * i,
+			ease: [0.215, 0.61, 0.355, 1],
+		},
+	}),
+};
+
+export const opacity = {
+	initial: {
+		opacity: 0.5,
+	},
+	enter: {
+		opacity: 0,
+	},
+	exit: {
+		opacity: 0.5,
+	},
+};

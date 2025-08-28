@@ -1,6 +1,6 @@
 import React from "react";
 import StoreProvider from "../store/store-provider";
-import ClientLayout from "~/entities/client-layout";
+import ClientLayout from "~/src/entities/client-layout/ui";
 
 interface Props {
 	children: React.ReactNode;
