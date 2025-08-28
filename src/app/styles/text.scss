@@ -1,14 +1,8 @@
 @use "./colors.scss" as *;
 $font-family: "Inter", sans-serif;
-$second-family: "ABCSolarPlusVariable", sans-serif;
 
 .first-family {
     font-family: $font-family;
-}
-
-.second-family {
-    font-family: $second-family;
-    font-feature-settings: 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss09' on, 'ss16' on, 'ss17' on, 'ss18' on;
 }
 //
 

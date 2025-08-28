@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
       @use "app/styles/colors.scss" as *;
       @use "app/styles/sizes.scss" as *;
       @use "app/styles/text.scss" as *;
+      @use "app/styles/mixins.scss" as *;
     `,
 	},
 

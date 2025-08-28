@@ -6,5 +6,5 @@ interface Props {
 }
 
 export default function ClientLayout({ children }: Props) {
-	return <>{children}</>;
+	return <main>{children}</main>;
 }

@@ -37,11 +37,9 @@ path {
 }
 
 html {
-  background-color: #000;
+  background-color: $backround-primary;
   scroll-behavior: smooth;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  @include scrollbar();
 }
 
 body {
