@@ -1,5 +1,5 @@
-import HomePage from "~/src/pages-components/home/ui";
+import LoginPage from "~/src/pages-components/login/ui";
 
 export default function Page() {
-	return <HomePage />;
+	return <LoginPage />;
 }

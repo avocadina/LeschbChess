@@ -14,12 +14,7 @@ export default function ClientLayout({ children }: Props) {
 	return (
 		<StairsTransition>
 			<StickyCursor />
-			<div
-				role="main"
-				className={"main"}
-			>
-				{children}
-			</div>
+			{children}
 		</StairsTransition>
 	);
 }

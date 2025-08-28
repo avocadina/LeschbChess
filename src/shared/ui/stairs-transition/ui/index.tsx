@@ -20,6 +20,7 @@ export default function StairsTransition({ children }: Props) {
 	};
 
 	const nbOfColumns = 6;
+
 	return (
 		<div className={`${classes.stairs}`}>
 			<motion.div

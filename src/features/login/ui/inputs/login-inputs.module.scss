@@ -1,0 +1,30 @@
+.wrapper {
+    height: 100%;
+    justify-content: center;
+}
+
+.container {
+    gap: $space-3;
+}
+
+.inputContainer {
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    padding: $space-5 $space-3;
+    border-radius: $space-5;
+
+    color: $text-black;
+    background-color: $white !important;
+}
+
+.inputPlaceholder {
+    position: absolute;
+    top: 50%;
+    left: $space-3;
+    transform: translateY(-50%);
+    color: $text-black;
+}

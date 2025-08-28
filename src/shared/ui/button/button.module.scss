@@ -1,0 +1,17 @@
+.button {
+    display: grid;
+    align-items: center;
+    transition: all $transition !important;
+    user-select: none;
+
+    cursor: pointer;
+
+    &.activeScale:active {
+        transform: scale(0.95);
+    }
+}
+
+.ghost {
+    background-color: transparent;
+    color: inherit;
+}

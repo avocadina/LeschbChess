@@ -1,0 +1,12 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    padding: $space-5 0;
+}
+
+.header__wrapper {
+    align-items: center;
+    justify-content: space-between;
+}

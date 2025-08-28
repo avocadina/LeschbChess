@@ -2,14 +2,17 @@ import React from "react";
 
 export interface ContainerProps {
 	className?: string;
-	children: React.ReactNode;
-	color?: string;
-	onClick?: () => void;
 	radius?: number;
 	padding?: string;
+	onClick?: () => void;
 }
 
-export const Container = ({ className, children, color, onClick, radius, padding }: ContainerProps) => {
+interface Props extends ContainerProps {
+	color: string;
+	children: React.ReactNode;
+}
+
+export const Container = ({ className, children, color, onClick, radius, padding }: Props) => {
 	return (
 		<div
 			className={`${className} bg-${color}`}

@@ -1,0 +1,14 @@
+.loggedOut {
+    max-width: 33px;
+    max-height: 33px;
+}
+
+@media screen and (any-hover: hover) {
+    .loggedOut:hover {
+        svg {
+            path {
+                fill: $link-hover;
+            }
+        }
+    }
+}

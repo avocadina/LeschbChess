@@ -35,7 +35,7 @@ export const useStickyCursor = () => {
 		return () => {
 			window.removeEventListener("mousemove", manageMouseMove);
 		};
-	}, []);
+	}, [cursorSize, manageMouseMove]);
 
 	return {
 		smoothMouse,

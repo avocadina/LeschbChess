@@ -2,6 +2,15 @@
     width: 100vw;
     min-height: 100vh;
 }
+
+.wrapper {
+    width: 100%;
+    padding: 0 $space-4;
+}
+
+.pointer {
+    cursor: pointer;
+}
 //
 
 .flex-column {
@@ -24,7 +33,22 @@
     display: grid;
     place-content: center;
 }
+
+.center-element {
+    justify-content: center;
+}
 //
+.gap-1 {
+    gap: $space-1;
+}
+
+.gap-2 {
+    gap: $space-2;
+}
+
+.gap-3 {
+    gap: $space-3;
+}
 
 .gap-4 {
     gap: $space-4 

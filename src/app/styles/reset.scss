@@ -23,10 +23,17 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a {
   margin: 0;
   padding: 0;
   transition: color $transition, opacity $transition;
+  color: $neutral-white;
+
+  &::selection {
+    background-color: $white;
+    color: $background-primary;
+  }
 }
 
 svg,
@@ -44,7 +51,6 @@ html {
 }
 
 body {
-  justify-content: center;
   font-size: 16px;
 }
 
@@ -62,7 +68,6 @@ p {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -82,21 +87,4 @@ select {
   color: inherit;
   border: none;
   outline: none;
-}
-
-
-p,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $neutral-white;
-
-  &::selection {
-    background-color: $white;
-    color: $background-primary;
-  }
 }

@@ -1,8 +1,10 @@
 import { useEffect } from "react";
-
+import { useAppDispatch } from "~/src/app/store/hook";
+import { setNavigation } from "~/src/app/store/reducers/navigation.slice";
 import Lenis from "@studio-freight/lenis";
 
 export const useClientLayout = () => {
+	const dispatch = useAppDispatch();
 	useEffect(() => {
 		const lenis = new Lenis();
 
@@ -15,5 +17,27 @@ export const useClientLayout = () => {
 		return () => {
 			lenis.destroy();
 		};
+	}, []);
+
+	const declareDeviceType = () => {
+		const isMobile = /Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+		const isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+		if (isIos) {
+			dispatch(
+				setNavigation({
+					deviceType: "ios",
+				}),
+			);
+		} else if (isMobile) {
+			dispatch(
+				setNavigation({
+					deviceType: "android",
+				}),
+			);
+		}
+	};
+
+	useEffect(() => {
+		declareDeviceType();
 	}, []);
 };
