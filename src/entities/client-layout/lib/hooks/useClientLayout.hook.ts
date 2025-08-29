@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { useAppDispatch } from "~/src/app/store/hook";
 import { setNavigation } from "~/src/app/store/reducers/navigation.slice";
 import Lenis from "@studio-freight/lenis";
@@ -19,7 +19,7 @@ export const useClientLayout = () => {
 		};
 	}, []);
 
-	const declareDeviceType = () => {
+	const declareDeviceType = useCallback(() => {
 		const isMobile = /Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 		const isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 		if (isIos) {
@@ -35,9 +35,9 @@ export const useClientLayout = () => {
 				}),
 			);
 		}
-	};
+	}, [dispatch]);
 
 	useEffect(() => {
 		declareDeviceType();
-	}, []);
+	}, [declareDeviceType]);
 };

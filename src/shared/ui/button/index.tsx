@@ -2,8 +2,9 @@ import React from "react";
 
 import classes from "./button.module.scss";
 import classNames from "classnames";
+import StickyCursorItem from "../sticky-cursor/ui/item";
 
-export type ButtonTypeButtonT = "ghost";
+export type ButtonTypeButtonT = "ghost" | "light-blue";
 
 interface Props extends React.HTMLAttributes<HTMLButtonElement> {
 	typeButton: ButtonTypeButtonT;
@@ -26,7 +27,7 @@ export default function Button({
 	justifyCenter = true,
 	children,
 	disabled,
-	asLink,
+	asLink = false,
 	...rest
 }: Props) {
 	const sizeRender = () => {
@@ -37,7 +38,7 @@ export default function Button({
 		return classes[typeButton];
 	};
 
-	const classNameLocal = classNames(`${className}${classes.button} ${sizeRender()} ${typeButtonRender()}`, {
+	const classNameLocal = classNames(`${className} ${classes.button} ${sizeRender()} ${typeButtonRender()}`, {
 		[classes.activeScale]: needActiveScale,
 		"center-element": justifyCenter,
 		className,

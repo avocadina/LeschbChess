@@ -1,15 +1,19 @@
 import { useMotionValue, useSpring } from "framer-motion";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useMemo } from "react";
 import { useAppSelector } from "~/src/app/store/hook";
 import { selectNav } from "~/src/app/store/reducers/navigation.slice";
 
 export const useStickyCursor = () => {
 	const { cursorHovered } = useAppSelector(selectNav);
 	const cursorSize = cursorHovered ? 60 : 15;
-	const mouse = {
-		x: useMotionValue(0),
-		y: useMotionValue(0),
-	};
+	const initialValue = useMotionValue(0);
+	const mouse = useMemo(
+		() => ({
+			x: initialValue,
+			y: initialValue,
+		}),
+		[initialValue],
+	);
 
 	const smoothOptions = {
 		damping: 20,
